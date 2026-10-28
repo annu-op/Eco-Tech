@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EcoTrack Campus | College Resource Intelligence</title>
+<style>
+:root{--bg:#f4f7f4;--panel:#fff;--ink:#17251d;--muted:#68776d;--line:#e0e8e1;--green:#18794e;--green-light:#e4f5e9;--blue:#2e67d1;--amber:#b96b0b;--red:#bd3c3c;--shadow:0 8px 24px rgba(26,54,35,.055)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:10px;padding:10px 13px;background:var(--green);color:#fff;font-weight:700}button.secondary{background:#eef4ef;color:var(--ink);border:1px solid var(--line)}button.ghost{background:transparent;color:var(--green);padding:6px 8px}.shell{display:grid;grid-template-columns:235px minmax(0,1fr);min-height:100vh}.side{background:#153c2b;color:#fff;padding:24px 16px;display:flex;flex-direction:column;gap:25px}.brand{display:flex;gap:10px;align-items:center;padding:0 6px}.brand-icon{width:40px;height:40px;border-radius:13px;background:#d9f5e2;color:#145c39;display:grid;place-items:center;font-size:24px}.brand strong{font-size:18px;display:block}.brand small{color:#bcd8c6;font-size:11px}.nav-label{font-size:10px;letter-spacing:1.5px;color:#9fc3ad;padding:0 10px;margin-bottom:8px}.nav{display:grid;gap:5px}.nav button{background:transparent;color:#dcebe1;text-align:left;font-weight:550;padding:11px 12px;border-radius:10px}.nav button.active,.nav button:hover{background:#ffffff19;color:#fff}.side-note{margin-top:auto;background:#ffffff10;border:1px solid #ffffff20;border-radius:13px;padding:13px;color:#cfe1d4;font-size:11px}.side-note strong{display:block;color:#fff;font-size:12px;margin-bottom:5px}.main{min-width:0;padding:26px 28px 22px}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:22px}.eyebrow{font-size:11px;color:var(--green);font-weight:800;letter-spacing:1.4px}.top h1{font-size:26px;letter-spacing:-.8px;margin:4px 0}.top p{margin:0;color:var(--muted);font-size:13px}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.hero{border-radius:18px;background:linear-gradient(115deg,#17472f,#238255);padding:22px 25px;color:white;display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:16px}.hero h2{font-size:22px;line-height:1.2;margin:0 0 8px}.hero p{color:#d4ecdc;margin:0;max-width:650px;font-size:13px}.hero-metric{border:1px solid #ffffff3d;background:#ffffff12;padding:13px 17px;border-radius:13px;min-width:170px}.hero-metric small{color:#d4ecdc}.hero-metric strong{font-size:25px;display:block;margin:3px 0}.filters{display:flex;gap:10px;align-items:end;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px;margin-bottom:16px}.field{display:grid;gap:5px;min-width:130px}.field label{font-size:11px;color:var(--muted);font-weight:700}.field select,.field input{border:1px solid #dbe5dc;border-radius:9px;background:#fff;padding:9px 10px;color:var(--ink);max-width:100%}.filters .hint{margin-left:auto;color:var(--muted);font-size:11px;max-width:230px}.grid{display:grid;gap:14px}.kpis{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:var(--shadow);min-width:0}.kpi-label{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}.kpi-value{font-size:25px;font-weight:800;letter-spacing:-.6px;margin:9px 0 4px}.kpi-foot{font-size:11px;color:var(--muted)}.good{color:var(--green)}.warn{color:var(--amber)}.bad{color:var(--red)}.content-grid{grid-template-columns:minmax(0,1.55fr) minmax(280px,1fr);align-items:start}.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}.card h3{font-size:15px;margin:0 0 4px}.sub{font-size:11px;color:var(--muted)}.chart{height:250px}.chart canvas{width:100%;height:100%;display:block}.legend{display:flex;gap:13px;flex-wrap:wrap;color:var(--muted);font-size:11px;margin-top:8px}.dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:5px}.pill{font-size:10px;font-weight:800;border-radius:999px;padding:5px 8px;background:var(--green-light);color:var(--green);white-space:nowrap}.pill.amber{background:#fff1dc;color:#96550a}.pill.red{background:#fde9e9;color:#a72c2c}.bars{display:grid;gap:14px}.barrow{display:grid;grid-template-columns:90px minmax(40px,1fr) 72px;gap:8px;align-items:center;font-size:12px}.bartrack{height:9px;background:#edf2ed;border-radius:99px;overflow:hidden}.barfill{height:100%;background:var(--green);border-radius:99px}.barfill.high{background:#d97706}.barval{text-align:right;font-weight:750}.rec-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.rec{border:1px solid var(--line);border-radius:13px;padding:15px}.rec h4{font-size:14px;margin:10px 0 6px}.rec p{font-size:12px;color:var(--muted);margin:0 0 12px}.rec-footer{border-top:1px solid var(--line);padding-top:10px;display:flex;justify-content:space-between;gap:8px}.rec-footer small{display:block;color:var(--muted);font-size:10px}.rec-footer strong{font-size:12px}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:12px;white-space:nowrap}th,td{padding:10px 9px;border-bottom:1px solid var(--line);text-align:left}th{font-size:10px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;background:#f8faf8}td input,td select{border:1px solid #dce5dd;border-radius:7px;padding:6px;width:100px;background:#fff}td select{width:115px}.status{border-radius:999px;padding:4px 7px;font-size:10px;font-weight:800}.status.ok{background:#e4f5e9;color:#18794e}.status.alert{background:#fff1dc;color:#96550a}.status.high{background:#fde9e9;color:#a72c2c}.anomaly-list{display:grid;gap:9px}.anomaly{padding:10px 11px;border-radius:10px;background:#fff8ed;border:1px solid #f2e0c3}.anomaly strong{font-size:12px;display:block}.anomaly span{font-size:11px;color:#806b4e;display:block;margin-top:3px}.empty{font-size:12px;color:var(--muted);padding:12px 0}.callout{background:#eef5ff;border:1px solid #d9e6ff;border-radius:11px;padding:11px;color:#35527a;font-size:11px;margin-top:12px}.section{margin-top:17px}.section-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:11px}.section-title h3{font-size:17px;margin:0}.section-title p{font-size:11px;color:var(--muted);margin:3px 0 0}.edit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.edit-grid .field{min-width:0}.footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:22px;font-size:11px;color:var(--muted)}.view{display:none}.view.active{display:block}.hidden{display:none!important}
+@media(max-width:1000px){.shell{grid-template-columns:1fr}.side{padding:12px 15px;flex-direction:row;align-items:center;gap:15px}.nav-label,.side-note{display:none}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;padding:9px}.main{padding:20px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.content-grid{grid-template-columns:1fr}.rec-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.main{padding:14px}.side{align-items:flex-start;flex-direction:column}.top{flex-direction:column}.hero{align-items:flex-start;flex-direction:column}.hero-metric{width:100%}.kpis{gap:8px}.card{padding:13px}.kpi-value{font-size:21px}.rec-grid{grid-template-columns:1fr}.edit-grid{grid-template-columns:1fr 1fr}.filters .hint{margin-left:0}.chart{height:220px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="side">
+ <div class="brand"><div class="brand-icon">♧</div><div><strong>EcoTrack Campus</strong><small>COLLEGE SUSTAINABILITY</small></div></div>
+ <div><div class="nav-label">WORKSPACE</div><nav class="nav"><button class="active" data-view="overview">▦ &nbsp; Overview</button><button data-view="readings">▤ &nbsp; Meter readings</button><button data-view="actions">◎ &nbsp; Action plan</button><button data-view="college">⚙ &nbsp; College setup</button></nav></div>
+ <div class="side-note"><strong>Prototype data connection</strong>Currently using sample campus data in this browser. Live meter or college-system integration needs an approved data feed/API or scheduled CSV export.</div>
+</aside>
+<main class="main">
+<header class="top"><div><div class="eyebrow">CAMPUS RESOURCE INTELLIGENCE</div><h1 id="pageTitle">Campus overview</h1><p id="collegeSubtitle">A practical view of resource use across college buildings.</p></div><div class="top-actions"><label class="secondary" style="display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:10px;padding:9px 11px;gap:7px;cursor:pointer;background:#eef4ef;font-weight:700">↑ Import CSV <input id="csvFile" type="file" accept=".csv,text/csv" style="display:none"></label><button class="secondary" id="exportBtn">Export report</button></div></header>
+<section class="hero"><div><h2>Make every campus resource count.</h2><p>Spot unusual consumption, compare buildings fairly, and turn data into measurable actions for facilities teams, department heads, and campus sustainability committees.</p></div><div class="hero-metric"><small>Estimated monthly savings at target</small><strong id="heroSaving">₹18,000</strong><small id="heroMeta">Illustrative campus scenario</small></div></section>
+
+<div class="filters">
+ <div class="field"><label for="resource">RESOURCE</label><select id="resource"><option>Energy</option><option>Water</option><option>Waste</option></select></div>
+ <div class="field"><label for="building">BUILDING / AREA</label><select id="building"><option value="All">All campus</option><option>Academic Block</option><option>Computer Labs</option><option>Hostels</option><option>Cafeteria</option><option>Library</option></select></div>
+ <div class="field"><label for="period">REPORTING PERIOD</label><select id="period"><option>Monthly</option><option>Weekly</option><option>Daily</option></select></div>
+ <div class="field"><label for="threshold">ANOMALY THRESHOLD</label><select id="threshold"><option value="10">+10% over baseline</option><option value="15" selected>+15% over baseline</option><option value="20">+20% over baseline</option><option value="25">+25% over baseline</option></select></div>
+ <div class="hint">Sample values only. Replace them with approved campus readings to assess real performance.</div>
+</div>
+
+<div class="view active" id="view-overview">
+<section class="grid kpis">
+ <div class="card"><div class="kpi-label">Consumption <span>◉</span></div><div class="kpi-value" id="kpiConsumption">24,000 kWh</div><div class="kpi-foot" id="kpiConsumptionFoot">Selected campus scope</div></div>
+ <div class="card"><div class="kpi-label">Estimated resource cost <span>₹</span></div><div class="kpi-value" id="kpiCost">₹1,92,000</div><div class="kpi-foot">Based on editable unit cost assumption</div></div>
+ <div class="card"><div class="kpi-label">Target reduction <span>↘</span></div><div class="kpi-value good" id="kpiTarget">3,600 kWh</div><div class="kpi-foot" id="kpiTargetFoot">15% planning target</div></div>
+ <div class="card"><div class="kpi-label">Flags to investigate <span>⚑</span></div><div class="kpi-value warn" id="kpiAnomalies">3</div><div class="kpi-foot">Above selected baseline threshold</div></div>
+</section>
+<section class="grid content-grid">
+ <div class="card"><div class="card-head"><div><h3>Consumption trend</h3><div class="sub">Actual readings versus expected baseline</div></div><select id="chartMode" style="border:1px solid var(--line);border-radius:8px;padding:7px"><option value="trend">Trend</option><option value="compare">Actual vs baseline</option></select></div><div class="chart"><canvas id="trendChart"></canvas></div><div class="legend"><span><i class="dot" style="background:#18794e"></i>Actual</span><span><i class="dot" style="background:#9aafa1"></i>Baseline</span><span><i class="dot" style="background:#d97706"></i>Flagged reading</span></div></div>
+ <div class="card"><div class="card-head"><div><h3>Building comparison</h3><div class="sub">Consumption by area for selected resource</div></div><span class="pill">Campus</span></div><div class="bars" id="buildingBars"></div><div class="callout">Fair comparison tip: normalize energy and water by occupancy or floor area, and waste by people served or meals produced. A larger building is not automatically less efficient.</div></div>
+</section>
+<section class="section"><div class="section-title"><div><h3>Recommended actions</h3><p>Practical actions with targets that can be verified after implementation.</p></div><button class="secondary" data-goto="actions">View action plan →</button></div><div class="grid rec-grid" id="recommendations"></div></section>
+<section class="section grid content-grid">
+ <div class="card"><div class="card-head"><div><h3>Campus readings</h3><div class="sub">Most recent sample records for selected resource</div></div><button class="secondary" data-goto="readings">Manage data →</button></div><div class="tablewrap"><table><thead><tr><th>Date</th><th>Building</th><th>Actual</th><th>Baseline</th><th>Variance</th><th>Status</th></tr></thead><tbody id="recentRows"></tbody></table></div></div>
+ <div class="card"><div class="card-head"><div><h3>Anomaly watch</h3><div class="sub">Signals for facilities-team review</div></div><span class="pill amber" id="anomalyBadge">Review</span></div><div class="anomaly-list" id="anomalyList"></div></div>
+</section>
+</div>
+
+<div class="view" id="view-readings">
+<section class="section card"><div class="card-head"><div><h3>Campus meter and waste readings</h3><div class="sub">Edit values, occupancy, building, or add records. Changes update the overview instantly.</div></div><button id="addReading">+ Add reading</button></div><div class="tablewrap"><table><thead><tr><th>Date</th><th>Building</th><th>Resource</th><th>Actual</th><th>Baseline</th><th>Occupancy</th><th>Status</th><th></th></tr></thead><tbody id="allRows"></tbody></table></div><div class="callout">CSV import columns: date, building, resource, actual, baseline, occupancy, unit_cost. The app processes imported data locally in your browser.</div></section>
+</div>
+
+<div class="view" id="view-actions">
+<section class="section card"><div class="card-head"><div><h3>Campus action plan</h3><div class="sub">Suggested owner, verification metric, and example target for each intervention.</div></div><button class="secondary" id="exportActions">Export action plan</button></div><div class="tablewrap"><table><thead><tr><th>Priority</th><th>Action</th><th>Suggested owner</th><th>Measure</th><th>Example target</th><th>Verification</th></tr></thead><tbody id="actionRows"></tbody></table></div><div class="callout">Targets are starting hypotheses. Confirm feasibility with facilities staff, safety requirements, operating schedules, and a representative baseline before committing to them.</div></section>
+</div>
+
+<div class="view" id="view-college">
+<section class="section card"><div class="card-head"><div><h3>College profile and assumptions</h3><div class="sub">Customize the campus label and default planning inputs.</div></div><span class="pill amber">Demo mode</span></div><div class="edit-grid"><div class="field"><label for="collegeName">COLLEGE / CAMPUS NAME</label><input id="collegeName" value="My College Campus"></div><div class="field"><label for="studentCount">STUDENTS + STAFF</label><input id="studentCount" type="number" min="1" value="3000"></div><div class="field"><label for="floorArea">CAMPUS FLOOR AREA (m²)</label><input id="floorArea" type="number" min="1" value="25000"></div><div class="field"><label for="targetPct">REDUCTION TARGET (%)</label><select id="targetPct"><option value="5">5%</option><option value="10">10%</option><option value="15" selected>15%</option><option value="20">20%</option><option value="25">25%</option></select></div></div><div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap"><button id="saveProfile">Apply campus settings</button><button class="secondary" id="resetData">Reset sample data</button></div><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><h3>Connecting real college data</h3><div class="grid content-grid" style="margin-top:12px"><div><p class="sub" style="font-size:12px;line-height:1.7">This file is a local prototype, not connected to your college's meters, ERP, or building-management system. A real deployment can connect through an approved utility-meter API, BMS export, smart-meter gateway, or scheduled CSV from facilities staff.</p><p class="sub" style="font-size:12px;line-height:1.7">Before going live: confirm data ownership and access, map each meter to a building, align time zones and units, establish baselines, and restrict personal or sensitive data.</p></div><div class="callout" style="margin-top:0"><strong>Integration checklist</strong><br>1. Identify energy, water, and waste data sources.<br>2. Agree on a standard data schema and update frequency.<br>3. Validate readings and missing-data handling.<br>4. Connect an authenticated backend/API.<br>5. Pilot one building and verify savings before campus-wide rollout.</div></div></section>
+</div>
+<footer class="footer"><span>EcoTrack Campus · Interactive college sustainability prototype</span><span>Illustrative sample data · No server connection · Verify savings in practice</span></footer>
+</main>
+</div>
+<script>
+(()=>{
+const $=id=>document.getElementById(id);
+const units={Energy:'kWh',Water:'L',Waste:'kg'};
+const costs={Energy:8,Water:40,Waste:5};
+const buildings=['Academic Block','Computer Labs','Hostels','Cafeteria','Library'];
+const profiles={
+ 'Academic Block':{people:850,area:7000,Energy:7200,Water:14500,Waste:220},
+ 'Computer Labs':{people:320,area:2100,Energy:6100,Water:2800,Waste:90},
+ 'Hostels':{people:1100,area:9000,Energy:5700,Water:28000,Waste:360},
+ 'Cafeteria':{people:430,area:1500,Energy:2600,Water:8200,Waste:410},
+ 'Library':{people:300,area:2400,Energy:2400,Water:1800,Waste:65}
+};
+const dates=['2026-10-01','2026-10-02','2026-10-03','2026-10-04','2026-10-05','2026-10-06','2026-10-07','2026-10-08','2026-10-09','2026-10-10'];
+let rows=[];
+function seed(){
+ rows=[];
+ dates.forEach((date,di)=>buildings.forEach((building,bi)=>{
+  const p=profiles[building], factor=[.94,1.01,1.08,.97,1.21,1.03,1.17,.96,1.00,.93][di];
+  ['Energy','Water','Waste'].forEach(resource=>{
+   const base=p[resource]/10;
+   let actual=Math.round(base*factor*(1+((bi%3)-1)*.025));
+   if((di===4&&building==='Computer Labs'&&resource==='Energy')||(di===6&&building==='Hostels'&&resource==='Water')||(di===2&&building==='Cafeteria'&&resource==='Waste'))actual=Math.round(base*1.38);
+   rows.push({date,building,resource,actual,baseline:Math.round(base),occupancy:p.people,unit_cost:costs[resource]});
+  });
+ }));
+}
+let selectedResource='Energy', selectedBuilding='All', threshold=15, target=15, period='Monthly';
+const fmt=n=>Math.round(Number(n)||0).toLocaleString('en-IN');
+const money=n=>'₹'+fmt(n);
+const unit=()=>units[selectedResource];
+const costFor=(r,resource=r.resource)=>resource==='Water'?Number(r.actual)*Number(r.unit_cost||costs[resource])/1000:Number(r.actual)*Number(r.unit_cost||costs[resource]);
+const variance=r=>Number(r.baseline)>0?(Number(r.actual)-Number(r.baseline))/Number(r.baseline)*100:0;
+const flagged=r=>variance(r)>threshold;
+const filtered=()=>rows.filter(r=>r.resource===selectedResource&&(selectedBuilding==='All'||r.building===selectedBuilding));
+const uniqueLatest=arr=>arr.slice(-10);
+function escape(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function resourceTotal(arr){return arr.reduce((s,r)=>s+Number(r.actual||0),0)}
+function totalCost(arr){return arr.reduce((s,r)=>s+costFor(r),0)}
+function selectedScope(){return filtered()}
+function recommendations(){
+ const r=selectedResource, arr=selectedScope(), total=resourceTotal(arr), saving=total*target/100;
+ const sets={
+ Energy:[
+  ['Tune HVAC and building schedules','Facilities team','kWh after hours','8% lower after-hours kWh','Compare normalized weekly meter data'],
+  ['Audit lab and computer equipment','IT + lab managers','kWh per occupied lab-hour','5% lower lab energy intensity','Compare by room schedule and usage'],
+  ['Optimize lighting controls','Facilities team','Lighting-circuit kWh','3% lower lighting energy','Submeter or conduct before/after audit']
+ ],
+ Water:[
+  ['Investigate overnight flow and leaks','Facilities / plumbing','Litres per night','8% lower unexplained night flow','Inspect meter and log repairs'],
+  ['Review hostel and washroom fixtures','Hostel + facilities teams','Litres per resident-day','5% lower water intensity','Normalize by occupied beds'],
+  ['Measure reuse opportunities','Sustainability committee','Litres of potable water avoided','Pilot reuse in one approved area','Meter reused water separately']
+ ],
+ Waste:[
+  ['Reduce cafeteria food waste','Cafeteria operator','kg waste per meal','8% less food waste per meal','Weigh prep and plate waste separately'],
+  ['Improve segregation and recycling','Housekeeping + student council','kg diverted; contamination %','5% more waste diverted','Weekly bin audit and weigh tickets'],
+  ['Prevent paper and packaging waste','Departments + procurement','kg waste per person','3% lower mixed waste intensity','Compare purchasing and waste weights']
+ ]};
+ return sets[r].map((a,i)=>({priority:i===0?'High':'Medium',title:a[0],owner:a[1],measure:a[2],goal:a[3],verify:a[4],saving:saving*[.42,.33,.25][i],reduction:total*target/100*[.42,.33,.25][i],desc:({Energy:'Measure before and after; adjust for operating hours and occupancy.',Water:'Check meter quality and operational context before assuming a leak.',Waste:'Use weights and contamination audits rather than visual estimates.'})[r]}));
+}
+function renderKpis(){
+ const arr=selectedScope(), total=resourceTotal(arr),cost=totalCost(arr),reduction=total*target/100, anomalies=arr.filter(flagged).length;
+ $('kpiConsumption').textContent=fmt(total)+' '+unit();
+ $('kpiConsumptionFoot').textContent=selectedBuilding==='All'?'All buildings · '+period.toLowerCase()+' sample sum':selectedBuilding+' · '+period.toLowerCase()+' sample sum';
+ $('kpiCost').textContent=money(cost);
+ $('kpiTarget').textContent=fmt(reduction)+' '+unit();
+ $('kpiTargetFoot').textContent=target+'% illustrative reduction target';
+ $('kpiAnomalies').textContent=anomalies;
+ $('heroSaving').textContent=money(cost*target/100);
+ $('heroMeta').textContent=target+'% target · selected resource';
+}
+function drawChart(){
+ const canvas=$('trendChart'),rect=canvas.getBoundingClientRect(),dpr=devicePixelRatio||1;
+ canvas.width=Math.max(300,rect.width*dpr);canvas.height=Math.max(180,rect.height*dpr);
+ const ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);const w=canvas.width/dpr,h=canvas.height/dpr;
+ ctx.clearRect(0,0,w,h);const pad={l:48,r:12,t:15,b:30},cw=w-pad.l-pad.r,ch=h-pad.t-pad.b;
+ const arr=selectedScope();const groups=dates.map(date=>{const a=arr.filter(r=>r.date===date);return {date,actual:resourceTotal(a),baseline:a.reduce((s,r)=>s+Number(r.baseline),0),alert:a.some(flagged)};}).filter(g=>arr.some(r=>r.date===g.date));
+ if(!groups.length){ctx.fillStyle='#68776d';ctx.fillText('No readings for this selection',20,30);return;}
+ let max=Math.max(1,...groups.map(g=>Math.max(g.actual,g.baseline)))*1.16;
+ const x=i=>pad.l+(groups.length===1?cw/2:i*cw/(groups.length-1)),y=v=>pad.t+ch-v/max*ch;
+ ctx.font='10px system-ui';ctx.fillStyle='#77847b';ctx.strokeStyle='#e7ece7';
+ for(let j=0;j<=4;j++){let v=max*j/4,yy=y(v);ctx.beginPath();ctx.moveTo(pad.l,yy);ctx.lineTo(w-pad.r,yy);ctx.stroke();ctx.fillText(fmt(v),3,yy+3);}
+ const line=(key,color,dash=[])=>{ctx.beginPath();ctx.strokeStyle=color;ctx.lineWidth=2.4;ctx.setLineDash(dash);groups.forEach((g,i)=>i?ctx.lineTo(x(i),y(g[key])):ctx.moveTo(x(i),y(g[key])));ctx.stroke();ctx.setLineDash([]);};
+ if($('chartMode').value==='compare'){
+  const bw=Math.max(5,Math.min(16,cw/groups.length*.23));
+  groups.forEach((g,i)=>{ctx.fillStyle=g.alert?'#d97706':'#18794e';ctx.fillRect(x(i)-bw-2,y(g.actual),bw,pad.t+ch-y(g.actual));ctx.fillStyle='#9aafa1';ctx.fillRect(x(i)+2,y(g.baseline),bw,pad.t+ch-y(g.baseline));});
+ }else{
+  line('baseline','#9aafa1',[5,4]);line('actual','#18794e');
+  groups.forEach((g,i)=>{ctx.beginPath();ctx.fillStyle=g.alert?'#d97706':'#18794e';ctx.arc(x(i),y(g.actual),g.alert?4.2:2.7,0,Math.PI*2);ctx.fill();});
+ }
+ ctx.fillStyle='#77847b';ctx.textAlign='center';const step=Math.max(1,Math.ceil(groups.length/6));
+ groups.forEach((g,i)=>{if(i%step===0||i===groups.length-1)ctx.fillText(g.date.slice(5),x(i),h-8);});ctx.textAlign='left';
+}
+function renderBuildings(){
+ const list=buildings.map(b=>{const a=rows.filter(r=>r.resource===selectedResource&&r.building===b&&(selectedBuilding==='All'||selectedBuilding===b));return {name:b,val:resourceTotal(a),people:profiles[b].people,area:profiles[b].area};});
+ const max=Math.max(1,...list.map(x=>x.val));
+ $('buildingBars').innerHTML=list.map(b=>`<div class="barrow"><span>${b.name.replace('Academic Block','Academic').replace('Computer Labs','Labs')}</span><div class="bartrack"><div class="barfill ${b.val/max>.8?'high':''}" style="width:${Math.max(2,b.val/max*100)}%"></div></div><span class="barval">${fmt(b.val)} ${unit()}</span></div>`).join('');
+}
+function renderRecommendations(){
+ const recs=recommendations();
+ $('recommendations').innerHTML=recs.map((r,i)=>`<article class="rec"><span class="pill ${i===0?'':'amber'}">${r.priority} priority</span><h4>${r.title}</h4><p>${r.desc}</p><div class="sub">Suggested owner: ${r.owner}</div><div class="rec-footer"><div><small>Example reduction</small><strong>${fmt(r.reduction)} ${unit()}</strong></div><div><small>Potential cost impact</small><strong class="good">${money(r.saving)}</strong></div></div><div class="sub" style="margin-top:9px">Estimates may overlap; not guaranteed savings.</div></article>`).join('');
+ $('actionRows').innerHTML=recs.map(r=>`<tr><td><span class="status ${r.priority==='High'?'alert':'ok'}">${r.priority}</span></td><td>${r.title}</td><td>${r.owner}</td><td>${r.measure}</td><td>${r.goal}</td><td>${r.verify}</td></tr>`).join('');
+}
+function renderRecent(){
+ const arr=selectedScope().slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,9);
+ $('recentRows').innerHTML=arr.map(r=>`<tr><td>${escape(r.date)}</td><td>${escape(r.building)}</td><td>${fmt(r.actual)} ${unit()}</td><td>${fmt(r.baseline)}</td><td class="${variance(r)>threshold?'bad':variance(r)<0?'good':''}">${variance(r)>0?'+':''}${variance(r).toFixed(1)}%</td><td><span class="status ${flagged(r)?'alert':'ok'}">${flagged(r)?'Review':'In range'}</span></td></tr>`).join('');
+ const alerts=selectedScope().filter(flagged).sort((a,b)=>variance(b)-variance(a)).slice(0,5);
+ $('anomalyBadge').textContent=alerts.length?alerts.length+' to review':'No flags';
+ $('anomalyList').innerHTML=alerts.length?alerts.map(r=>`<div class="anomaly"><strong>${escape(r.building)} · ${escape(r.date)}</strong><span>${fmt(r.actual)} ${unit()} is ${variance(r).toFixed(1)}% above the baseline (${fmt(r.baseline)}). Check occupancy, schedules, weather/production, and meter quality.</span></div>`).join(''):'<div class="empty">No readings exceed the selected threshold. Continue monitoring trends and validate baseline assumptions.</div>';
+}
+function renderAllRows(){
+ $('allRows').innerHTML=rows.map((r,i)=>`<tr><td><input type="date" data-i="${i}" data-k="date" value="${escape(r.date)}"></td><td><select data-i="${i}" data-k="building">${buildings.map(b=>`<option ${r.building===b?'selected':''}>${b}</option>`).join('')}</select></td><td><select data-i="${i}" data-k="resource">${Object.keys(units).map(b=>`<option ${r.resource===b?'selected':''}>${b}</option>`).join('')}</select></td><td><input type="number" min="0" step="any" data-i="${i}" data-k="actual" value="${r.actual}"></td><td><input type="number" min="0" step="any" data-i="${i}" data-k="baseline" value="${r.baseline}"></td><td><input type="number" min="0" step="1" data-i="${i}" data-k="occupancy" value="${r.occupancy}"></td><td><span class="status ${flagged(r)?'alert':'ok'}">${flagged(r)?'Review':'In range'}</span></td><td><button class="ghost" data-del="${i}">Delete</button></td></tr>`).join('');
+ $('allRows').querySelectorAll('input,select').forEach(el=>el.addEventListener('change',e=>{const i=+e.target.dataset.i,k=e.target.dataset.k;rows[i][k]=k==='date'||k==='building'||k==='resource'?e.target.value:Math.max(0,Number(e.target.value)||0);render();}));
+ $('allRows').querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',()=>{rows.splice(+b.dataset.del,1);render();}));
+}
+function render(){renderKpis();drawChart();renderBuildings();renderRecommendations();renderRecent();renderAllRows();$('collegeSubtitle').textContent=$('collegeName').value+' · Resource performance across campus buildings.';}
+function downloadCsv(name,data){const csv=data.map(row=>row.map(v=>{const s=String(v??'');return /[,"\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}).join(',')).join('\r\n');const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();URL.revokeObjectURL(url);}
+$('resource').addEventListener('change',e=>{selectedResource=e.target.value;render();});
+$('building').addEventListener('change',e=>{selectedBuilding=e.target.value;render();});
+$('period').addEventListener('change',e=>{period=e.target.value;render();});
+$('threshold').addEventListener('change',e=>{threshold=+e.target.value;render();});
+$('chartMode').addEventListener('change',drawChart);
+$('targetPct').addEventListener('change',e=>{target=+e.target.value;render();});
+$('saveProfile').addEventListener('click',()=>{target=+$('targetPct').value;render();alert('Campus settings applied to this prototype view. Data remains local to this browser session.');});
+$('addReading').addEventListener('click',()=>{const d=new Date();rows.push({date:d.toISOString().slice(0,10),building:selectedBuilding==='All'?'Academic Block':selectedBuilding,resource:selectedResource,actual:1000,baseline:1000,occupancy:profiles[selectedBuilding==='All'?'Academic Block':selectedBuilding].people,unit_cost:costs[selectedResource]});render();});
+$('resetData').addEventListener('click',()=>{seed();selectedResource='Energy';selectedBuilding='All';target=15;threshold=15;$('resource').value='Energy';$('building').value='All';$('targetPct').value='15';$('threshold').value='15';render();});
+$('exportBtn').addEventListener('click',()=>downloadCsv('ecotrack-campus-report.csv',[['date','building','resource','actual','baseline','variance_percent','occupancy','unit_cost_inr','anomaly'],...rows.map(r=>[r.date,r.building,r.resource,r.actual,r.baseline,variance(r).toFixed(2),r.occupancy,r.unit_cost,flagged(r)?'yes':'no'])]));
+$('exportActions').addEventListener('click',()=>downloadCsv('ecotrack-campus-action-plan.csv',[['priority','action','suggested_owner','measure','example_target','verification'],...recommendations().map(r=>[r.priority,r.title,r.owner,r.measure,r.goal,r.verify])]));
+$('csvFile').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{const text=await f.text(),lines=text.trim().split(/\r?\n/);const parse=s=>{let out=[],v='',q=false;for(let i=0;i<s.length;i++){const c=s[i];if(c==='"'&&s[i+1]==='"'){v+='"';i++;}else if(c==='"')q=!q;else if(c===','&&!q){out.push(v);v='';}else v+=c;}out.push(v);return out.map(x=>x.trim());};const headers=parse(lines.shift()).map(x=>x.toLowerCase());const ix=k=>headers.indexOf(k);['date','building','resource','actual','baseline'].forEach(k=>{if(ix(k)<0)throw Error('Missing required column: '+k);});const imported=lines.map(line=>{const a=parse(line);return {date:a[ix('date')],building:a[ix('building')],resource:a[ix('resource')],actual:Number(a[ix('actual')]),baseline:Number(a[ix('baseline')]),occupancy:ix('occupancy')>=0?Number(a[ix('occupancy')]):0,unit_cost:ix('unit_cost')>=0?Number(a[ix('unit_cost')]):costs[a[ix('resource')]]};}).filter(r=>r.date&&buildings.includes(r.building)&&units[r.resource]&&Number.isFinite(r.actual)&&Number.isFinite(r.baseline));if(!imported.length)throw Error('No valid rows. Check building/resource names and numeric values.');rows=imported;render();alert('Imported '+rows.length+' valid readings.');}catch(err){alert('Import failed: '+err.message);}e.target.value='';});
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.view)));
+document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.goto)));
+function showView(name){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+name));document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===name));$('pageTitle').textContent=({overview:'Campus overview',readings:'Meter readings',actions:'Campus action plan',college:'College setup'})[name];if(name==='overview')setTimeout(drawChart,30);}
+window.addEventListener('resize',drawChart);
+seed();render();
+})();
+</script>
+</body>
+</html>
